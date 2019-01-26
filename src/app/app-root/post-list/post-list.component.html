@@ -1,0 +1,9 @@
+<h2>Post</h2><br>
+<div *ngFor="let item of posts">
+  <li class="list-group-item list-group-item-success"*ngIf="item.loveIts>=0"><h5>{{item.title}}</h5> <p>{{item. created_at}}</p>{{item. content}}<br>
+    <button type="button" class="btn btn-success"(click)="love(item.title)">Love it</button>
+    <button type="button" class="btn btn-danger"(click)="dontlove(item.title)">Don't love it</button></li>
+  <li class="list-group-item list-group-item-danger"*ngIf="item.loveIts<0"><h5>{{item.title}}</h5><p>{{item. created_at}}</p>{{item. content}}<br>
+    <button type="button" class="btn btn-success"(click)="love(item.title)">Love it</button>
+    <button type="button" class="btn btn-danger"(click)="dontlove(item.title)">Don't love it</button></li>
+</div>
